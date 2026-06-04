@@ -493,6 +493,15 @@ ul {
 	visibility: visible;
 	opacity: 1;
 }
+  /* Prevent fixed mobile nav from being constrained by transformed header container */
+  .header-main.width100-animation-izrada-sajtova.active{
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+  .header-main{
+    overflow: visible;
+  }
 	.header .nav-menu{
 		position: fixed;
 		right: 0px;
@@ -511,6 +520,8 @@ ul {
 		visibility: visible;
 		right: 0px;
         animation: navbar .2s forwards ease-in;
+    -webkit-clip-path: none;
+    clip-path: none;
 	}
       @keyframes navbar {
     0% {
