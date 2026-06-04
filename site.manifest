@@ -87,7 +87,7 @@
             "name": "Kontakt",
             "short_name": "Kontakt",
             "description": "Kontaktirajte nas",
-            "url": "/kontakt",
+            "url": "/kontakt.html",
             "icons": [
                 {
                     "src": "/shortcut-icon-96x96.png",
@@ -100,7 +100,7 @@
             "name": "Portfolio",
             "short_name": "Portfolio",
             "description": "Pogledajte naše radove",
-            "url": "/portfolio",
+            "url": "/radovi.html",
             "icons": [
                 {
                     "src": "/shortcut-icon-96x96.png",
