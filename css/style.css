@@ -1217,6 +1217,7 @@ body.color-9 { background-color: #ffffff15; }
 }
 .partners-card img {
     width: 100px;
+    height: fit-content;
     opacity: .7;
 }
 .partners-card .partner1 {
