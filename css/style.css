@@ -790,7 +790,7 @@ ul {
     padding: 1.5rem 0;
 }
 .poruka h4 {
-    color: #d19f10;
+    color: #dba616;
     font-family: sans-serif;
     font-weight: 200;
     font-size: 0.9rem;
@@ -1933,7 +1933,7 @@ li {
 .pricing-note {
   font-size: 0.95rem;
   line-height: 1.65;
-  opacity: 0.9;
+  opacity: 0.93;
   margin-top: 1.2rem;
 }
 @media (max-width: 1000px) {
