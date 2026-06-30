@@ -2041,7 +2041,18 @@ window.addEventListener("scroll", () => {
     });
   });
   // END GLOW ON HOVER
+  // UČITAVANJE VIDEA POLSE LOADINGA NA HERO
+  window.addEventListener('load', () => {
+  const video = document.querySelector('.video-animation-izrada-sajtova');
+  const source = video.querySelector('source');
 
+  if (source.dataset.src) {
+    source.src = source.dataset.src;
+    video.load();
+    video.play().catch(() => {});
+  }
+});
+// END UČITAVANJE VIDEA POSLE LOADING NA HERO
 
     </script>
 </body>
