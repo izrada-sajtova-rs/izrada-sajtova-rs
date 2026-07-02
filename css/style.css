@@ -25,7 +25,7 @@
     --primary-light: #98958e;
     --primary-lighter: #c9c4b2;
     --secondary-color: #ffd700;
-    --secondary-dark: #bd8f05;
+    --secondary-dark: #e9b524;
     --secondary-light: #fee24e;
     --gradient-primary: linear-gradient(
       33deg,
@@ -77,8 +77,6 @@
 @media (prefers-color-scheme: dark) {
     meta[name="theme-color"] {
         content: "#1a1a1a";
-    }
-    link[rel="manifest"]::after {
     }
 }
 html, body {
@@ -348,7 +346,7 @@ ul {
 	font-size: 16px;
 	color: var(--light);
 	font-weight: 500;
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 .header .menu > .menu-item:last-child a{
 	color: rgb(255, 255, 255);
@@ -373,7 +371,7 @@ ul {
 	height: 2px;
 	width: 100%;
 	transform: translate(-50%,-50%);
-	transition: all 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .header .menu > .menu-item:hover > a .plus:before,
 .header .menu > .menu-item:hover > a .plus:after{
@@ -396,7 +394,7 @@ ul {
 	padding: 10px 0;
 	border-top: 3px solid var(--secondary-color);
 	transform: translateY(10px);
-	transition: all 0.3s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 	opacity:0;
 	visibility: hidden;
     border-radius: 10px;
@@ -420,7 +418,7 @@ ul {
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--light);
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 .header .open-nav-menu{
 	height: 34px;
@@ -482,7 +480,7 @@ ul {
 	width: 100%;
 	visibility: hidden;
 	opacity:0;
-	transition: all 0.3s ease;
+	transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 .nav-krug {
   position: absolute;
@@ -531,7 +529,7 @@ ul {
 		background-color: #222222;
 		z-index: 1000;
 		padding: 15px 0;
-		transition: all 0.5s ease;
+		transition: right 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
         opacity: 0;
 	}
 	.header .nav-menu.open{
@@ -790,21 +788,12 @@ ul {
     padding: 1.5rem 0;
 }
 .poruka h4 {
-    color: #e9b524;
+    color: var(--secondary-dark);
     font-family: sans-serif;
     font-weight: 200;
     font-size: 0.9rem;
     font-style: italic;
     letter-spacing: 2px;
-}
-.promocija {
-    border: solid 1px var(--gray);
-    margin-top: 4rem;
-    padding: 20px;
-    border-radius: var(--border-radius-lg);
-    width: fit-content;
-    backdrop-filter: blur(8px);
-    background: rgba(55, 55, 55, 0.458);
 }
 .promotion-price {
     font-family: var(--font-body);
@@ -921,11 +910,12 @@ ul {
     border: solid #5a5a58 1px;
     display: block;
     height: 100%;
+    width: fit-content;
     object-fit: cover;
     box-shadow: 
         8px 8px 20px rgba(0, 0, 0, 0.4),
         -8px -8px 20px rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     filter: brightness(1.05) contrast(1.1);
 }
 .section-about-img:hover img {
@@ -971,7 +961,7 @@ ul {
     opacity: 0;
     position: relative;
     top: 50px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .animated-text-line.active {
     opacity: 1;
@@ -1270,7 +1260,6 @@ body.color-9 { background-color: #ffffff15; }
     padding: 25px;
     border: 1px solid var(--gray);
     border-radius: var(--border-radius-lg);
-    backdrop-filter: blur(10px);
     transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -1362,7 +1351,6 @@ body.color-9 { background-color: #ffffff15; }
     border: 1px solid var(--gray);
     border-radius: var(--border-radius-lg);
     padding: 25px;
-    backdrop-filter: blur(10px);
     overflow: hidden;
 }
 .cta-content h3 {
@@ -1385,7 +1373,7 @@ body.color-9 { background-color: #ffffff15; }
     border-radius: 12px;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     font-size: 1rem;
     border: 2px solid transparent;
 }
@@ -1513,7 +1501,7 @@ body.color-9 { background-color: #ffffff15; }
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid var(--gray);
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 .faq-item::before {
@@ -1553,7 +1541,7 @@ body.color-9 { background-color: #ffffff15; }
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--p-color);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     margin-left: 20px;
     min-width: 20px;
     text-align: center;
@@ -1562,7 +1550,7 @@ body.color-9 { background-color: #ffffff15; }
     padding: 0 32px;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .faq-answer p {
     color: var(--p-color);
@@ -1591,13 +1579,13 @@ body.color-9 { background-color: #ffffff15; }
 }
 .cta-link {
     color: var(--secondary-color);
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 .cta-link:hover {
-    color: var(--secondary-dark);
-    text-decoration: underline;
+    color: #fec62d;
+    
 }
 @media (max-width: 768px) {
     .faq-question {
@@ -1663,6 +1651,8 @@ body.color-9 { background-color: #ffffff15; }
 }
 .platforms-card img {
     width: 100px;
+    height: auto;
+    display: block;
     opacity: .7;
 }
 .platforms-card svg {
@@ -1933,7 +1923,7 @@ li {
 .pricing-note {
   font-size: 0.95rem;
   line-height: 1.65;
-  opacity: 0.93;
+  opacity: 0.9;
   margin-top: 1.2rem;
 }
 @media (max-width: 1000px) {
@@ -2388,7 +2378,7 @@ main h3:hover {
   color: var(--p-color);
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease;
   font-family: var(--font-body);
 }
 .filter-btn:hover {
@@ -2484,7 +2474,7 @@ main h3:hover {
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.85rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .portfolio-link:hover {
   background: var(--secondary-dark);
@@ -3180,7 +3170,7 @@ main h3:hover {
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 .faq-item.active .faq-answer {
   padding: 0 20px 20px;
@@ -3293,7 +3283,7 @@ main h3:hover {
             border-radius: 50%;
             color: var(--light);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .social-icons a:hover {
             background: var(--secondary-dark);
@@ -3319,13 +3309,19 @@ main h3:hover {
             width: 20px;
             transform: translateY(3px);
         }
-        .footer-map iframe {
+        .footer-map {
+            width: 100%;
+            min-height: 220px;
+          }
+
+          .footer-map iframe {
             width: 100%;
             height: 200px;
             border: none;
             border-radius: var(--border-radius-md);
             margin-bottom: 20px;
-        }
+            display: block;
+          }
         .footer-contact p {
             margin-bottom: 15px;
             display: flex;
@@ -3769,11 +3765,6 @@ p {
   margin-left: 0;
 }
 .hero-review {
-    position: absolute;
-    left: 5%;
-    bottom: -10px;
-}
-.promocija {
     position: absolute;
     left: 5%;
     bottom: -10px;

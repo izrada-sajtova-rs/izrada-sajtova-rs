@@ -173,32 +173,7 @@
   }
   </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TLJFZZKZF5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-TLJFZZKZF5');
-  gtag('config', 'AW-18141607037');
-</script>
-<!-- Event snippet for Click to call conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18141607037/JePsCOeFsqgcEP3oy8pD',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
 </head>
 <body>
   <header class="header">
@@ -697,7 +672,14 @@ function gtag_report_conversion(url) {
                 <div class="footer-column">
                     <h4>Lokacija</h4>
                     <div class="footer-map">
-                        <iframe title="Lokacija firme za izradu sajtova - Izrada sajtova RS" data-description="Lokacija firme za izradu sajtova - Izrada sajtova RS" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181102.09061018072!2d20.304029730598383!3d44.82715416401004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a5cef3eb4327d%3A0xea2f2c38a17d639d!2z0JPRgNC-0LHRmdCw0L3RgdC60LAgOTcsIFVncmlub3ZjaSwgU2VyYmlh!5e0!3m2!1sen!2s!4v1741621341998!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe 
+                        title="Lokacija firme za izradu sajtova - Izrada sajtova RS"
+                        data-description="Lokacija firme za izradu sajtova - Izrada sajtova RS"
+                        data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181102.09061018072!2d20.304029730598383!3d44.82715416401004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a5cef3eb4327d%3A0xea2f2c38a17d639d!2z0JPRgNC-0LHRmdCw0L3RgdC60LAgOTcsIFVncmlub3ZjaSwgU2VyYmlh!5e0!3m2!1sen!2s!4v1741621341998!5m2!1sen!2s"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
                     </div>
                  </div>
                 <div class="footer-column">
@@ -1101,7 +1083,95 @@ window.addEventListener("scroll", () => {
 });
 
   // END HIDE BUTTONS
-  
+  // UCITAVANJE MAPE
+function loadFooterMap() {
+    const mapIframe = document.querySelector('.footer-map iframe');
+
+    if (!mapIframe) return;
+    if (mapIframe.dataset.loaded === 'true') return;
+
+    const mapSrc = mapIframe.dataset.src;
+    if (!mapSrc) return;
+
+    mapIframe.src = mapSrc;
+    mapIframe.dataset.loaded = 'true';
+  }
+
+  const footerMap = document.querySelector('.footer-map');
+
+  if (footerMap) {
+    const mapObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          loadFooterMap();
+          observer.disconnect();
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '600px 0px',
+      threshold: 0
+    });
+
+    mapObserver.observe(footerMap);
+  }
+// END UČITAVANJE MAPE
     </script>
+    <script>
+  let googleTagLoaded = false;
+
+  function loadGoogleTag() {
+    if (googleTagLoaded) return;
+    googleTagLoaded = true;
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TLJFZZKZF5';
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      dataLayer.push(arguments);
+    };
+
+    gtag('js', new Date());
+
+    // Google Analytics
+    gtag('config', 'G-TLJFZZKZF5');
+
+    // Google Ads
+    gtag('config', 'AW-18141607037');
+  }
+
+  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
+  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
+  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
+  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+
+  window.addEventListener('load', function () {
+    setTimeout(loadGoogleTag, 4000);
+  });
+
+  function gtag_report_conversion(url) {
+    const callback = function () {
+      if (typeof url !== 'undefined') {
+        window.location = url;
+      }
+    };
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18141607037/JePsCOeFsqgcEP3oy8pD',
+        'event_callback': callback,
+        'event_timeout': 1500
+      });
+
+      return false;
+    }
+
+    callback();
+    return false;
+  }
+</script>
 </body>
 </html>
