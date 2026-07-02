@@ -1876,105 +1876,116 @@ window.addEventListener("scroll", () => {
   // END HIDE BUTTONS
 
 
-  // RESULTS ON HOVER
+  // RESULTS ON HOVER - DESKTOP ONLY
   document.addEventListener('DOMContentLoaded', function() {
-            const serviceCards = document.querySelectorAll('.results-card');
-            const websitePreview = document.getElementById('websitePreview');
-            const previewTitle = document.getElementById('previewTitle');
-            const body = document.body;
-            const colorClasses = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5', 'color-6', 'color-7'];
-            const previewOffsetX = 30;
-            const previewOffsetY = 20;
-            let targetX = 0;
-            let targetY = 0;
-            let currentX = 0;
-            let currentY = 0;
-            let previewAnimationFrame = null;
-            let isPreviewActive = false;
+    if (window.innerWidth <= 768) return;
 
-            function updatePreviewPosition() {
-                if (!isPreviewActive) {
-                    previewAnimationFrame = null;
-                    return;
-                }
+    const serviceCards = document.querySelectorAll('.results-card');
+    const websitePreview = document.getElementById('websitePreview');
+    const body = document.body;
 
-                currentX += (targetX - currentX) * 0.1;
-                currentY += (targetY - currentY) * 0.1;
+    if (!serviceCards.length || !websitePreview) return;
 
-                websitePreview.style.left = `${currentX}px`;
-                websitePreview.style.top = `${currentY}px`;
+    const colorClasses = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5', 'color-6', 'color-7'];
+    const previewOffsetX = 30;
+    const previewOffsetY = 20;
 
-                previewAnimationFrame = requestAnimationFrame(updatePreviewPosition);
-            }
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let previewAnimationFrame = null;
+    let isPreviewActive = false;
 
-            function setPreviewTarget(e) {
-                let posX = e.clientX + previewOffsetX;
-                let posY = e.clientY + previewOffsetY;
+    function updatePreviewPosition() {
+      if (!isPreviewActive) {
+        previewAnimationFrame = null;
+        return;
+      }
 
-                if (posX + websitePreview.offsetWidth > window.innerWidth) {
-                    posX = e.clientX - websitePreview.offsetWidth - previewOffsetX;
-                }
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
 
-                if (posY + websitePreview.offsetHeight > window.innerHeight) {
-                    posY = e.clientY - websitePreview.offsetHeight - previewOffsetY;
-                }
+      websitePreview.style.left = `${currentX}px`;
+      websitePreview.style.top = `${currentY}px`;
 
-                targetX = posX;
-                targetY = posY;
-            }
+      previewAnimationFrame = requestAnimationFrame(updatePreviewPosition);
+    }
 
-            serviceCards.forEach(card => {
-                card.addEventListener('mouseenter', function(e) {
-                    const imageUrl = this.getAttribute('data-image');
-                    const title = this.getAttribute('data-title');
-                    const colorClass = this.getAttribute('data-color');
+    function setPreviewTarget(e) {
+      let posX = e.clientX + previewOffsetX;
+      let posY = e.clientY + previewOffsetY;
 
-                    websitePreview.innerHTML = `<img src="${imageUrl}" alt="${title}">`;
-                    websitePreview.classList.add('active');
+      if (posX + websitePreview.offsetWidth > window.innerWidth) {
+        posX = e.clientX - websitePreview.offsetWidth - previewOffsetX;
+      }
 
-                    body.classList.remove(...colorClasses);
-                    if (colorClass) {
-                        body.classList.add(colorClass);
-                    }
+      if (posY + websitePreview.offsetHeight > window.innerHeight) {
+        posY = e.clientY - websitePreview.offsetHeight - previewOffsetY;
+      }
 
-                    isPreviewActive = true;
-                    setPreviewTarget(e);
-                    currentX = targetX;
-                    currentY = targetY;
-                    websitePreview.style.left = `${currentX}px`;
-                    websitePreview.style.top = `${currentY}px`;
+      targetX = posX;
+      targetY = posY;
+    }
 
-                    if (!previewAnimationFrame) {
-                        previewAnimationFrame = requestAnimationFrame(updatePreviewPosition);
-                    }
-                });
-                
-                card.addEventListener('mousemove', function(e) {
-                    setPreviewTarget(e);
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    isPreviewActive = false;
-                    if (previewAnimationFrame) {
-                        cancelAnimationFrame(previewAnimationFrame);
-                        previewAnimationFrame = null;
-                    }
-                    websitePreview.classList.remove('active');
-                    
-                    body.classList.remove(...colorClasses);
-                });
-            });
-            
-            body.addEventListener('mouseleave', function() {
-                isPreviewActive = false;
-                if (previewAnimationFrame) {
-                    cancelAnimationFrame(previewAnimationFrame);
-                    previewAnimationFrame = null;
-                }
-                websitePreview.classList.remove('active');
-                body.classList.remove(...colorClasses);
-            });
-        });
+    serviceCards.forEach(function(card) {
+      card.addEventListener('mouseenter', function(e) {
+        const imageUrl = this.getAttribute('data-image');
+        const title = this.getAttribute('data-title');
+        const colorClass = this.getAttribute('data-color');
+
+        websitePreview.innerHTML = `<img src="${imageUrl}" alt="${title}">`;
+        websitePreview.classList.add('active');
+
+        body.classList.remove(...colorClasses);
+
+        if (colorClass) {
+          body.classList.add(colorClass);
+        }
+
+        isPreviewActive = true;
+        setPreviewTarget(e);
+
+        currentX = targetX;
+        currentY = targetY;
+
+        websitePreview.style.left = `${currentX}px`;
+        websitePreview.style.top = `${currentY}px`;
+
+        if (!previewAnimationFrame) {
+          previewAnimationFrame = requestAnimationFrame(updatePreviewPosition);
+        }
+      });
+
+      card.addEventListener('mousemove', function(e) {
+        setPreviewTarget(e);
+      });
+
+      card.addEventListener('mouseleave', function() {
+        isPreviewActive = false;
+
+        if (previewAnimationFrame) {
+          cancelAnimationFrame(previewAnimationFrame);
+          previewAnimationFrame = null;
+        }
+
+        websitePreview.classList.remove('active');
+        body.classList.remove(...colorClasses);
+      });
+    });
+
+    body.addEventListener('mouseleave', function() {
+      isPreviewActive = false;
+
+      if (previewAnimationFrame) {
+        cancelAnimationFrame(previewAnimationFrame);
+        previewAnimationFrame = null;
+      }
+
+      websitePreview.classList.remove('active');
+      body.classList.remove(...colorClasses);
+    });
+  });
   // END RESULTS ON HOVER
 
   // GLOW ON HOVER
