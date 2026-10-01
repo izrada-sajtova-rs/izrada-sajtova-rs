@@ -1,11 +1,21 @@
 <!DOCTYPE html>
+<!--
+  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  Sva prava zadržana. / All rights reserved.
+  Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
+  Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
+  The design, code, text and graphics of this website are protected by copyright.
+  Copying or use without written permission is not allowed.
+-->
 <html lang="sr">
 <head>
     <meta charset="UTF-8">
   <meta name="robots" content="noindex, follow">
   <meta name="googlebot" content="noindex, follow">
-    <title>404 - Stranica nije pronađena</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Stranica nije pronađena | Page Not Found</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
 <!-- Event snippet for Click to call conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
@@ -28,7 +38,12 @@ function gtag_report_conversion(url) {
         <h1>404</h1>
         <h2>Stranica nije pronađena</h2>
         <p>Stranica koju tražite ne postoji ili je premeštena.</p>
-        <a href="index.html" class="button">Povratak na početnu</a>
+        <a href="/" class="button">Povratak na početnu</a>
+    </div>
+    <div class="error-page container" lang="en">
+        <h2>Page not found</h2>
+        <p>The page you are looking for does not exist or has been moved.</p>
+        <a href="/en/" class="button">Back to the homepage</a>
     </div>
     <script>
   let googleTagLoaded = false;
