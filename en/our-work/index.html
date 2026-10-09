@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -1236,6 +1236,15 @@
       </div>
     </div>
   </section>
+  <section class="container section-about-page">
+  <div class="about-card">
+    <h3>Check the quality of a website yourself, in a few minutes</h3>
+    <div class="gold-underlineH3"></div>
+    <p>Most people don't know how to recognise a quality website, and that is completely normal. So we recommend the easiest route: open an AI tool you trust, send it the link to one of the projects on this page and the link to any other website in Serbia from the industry you are interested in, and ask it to compare them on loading speed, mobile display, structure, SEO foundation and clarity of content.</p>
+    <p>Within a few minutes you get an explanation that is clear even if you are not a professional, and that shows you where the difference lies. We are not afraid of comparison.</p>
+    <p><em>Example question: “Compare these two websites on loading speed, mobile display, structure, SEO foundation and clarity of content, and explain in simple terms which one is better made.”</em></p>
+  </div>
+</section>
   <section class="container service-mini-cta">
     <div class="process-cta goUp1-animation-izrada-sajta">
       <div class="cta-content">
@@ -1474,7 +1483,7 @@
 
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada Sajtova RS</span>. All rights reserved.</p>
-                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a></p>
+                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a><span aria-hidden="true">|</span><a href="../partners/">Partnerships</a></p>
             </div>
         </div>
     </footer>
@@ -1908,13 +1917,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -1975,6 +1999,9 @@ function loadFooterMap() {
       });
     });
   })();
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
 </script>
 </body>
 </html>
