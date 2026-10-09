@@ -3120,6 +3120,15 @@ main h3:hover {
   color: var(--p-color);
   font-weight: normal;
 }
+.privacy-checkbox label a {
+  color: rgb(208, 193, 80);
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+.privacy-checkbox label a:hover,
+.privacy-checkbox label a:focus-visible {
+  color: gold;
+}
 @media (max-width: 800px) {
 .privacy-checkbox label {
   font-size: .77rem !important;
@@ -3456,6 +3465,65 @@ main h3:hover {
 .music-toggle.show {
     opacity: 1;
     pointer-events: auto;
+}
+/* na mobilnom se dugmad sklanjaju kada se stigne do dna strane */
+@media (max-width: 991px) {
+  .call-button.show.at-bottom,
+  .music-toggle.show.at-bottom {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.feature-card h3 {
+  margin: 0;
+}
+/* sekcija sa dve kartice: svaka zauzima pola širine */
+@media (min-width: 700px) {
+  .features-grid.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* slika popunjava prazan prostor ispod liste u bočnoj kartici */
+.contact-info.partner-aside {
+  display: flex;
+  flex-direction: column;
+}
+.partner-aside .info-item strong {
+  min-width: 0;
+  margin-right: 8px;
+}
+.partner-aside-art {
+  flex: 1 1 0;
+  width: 100%;
+  max-width: 300px;
+  min-height: 120px;
+  height: 0;
+  margin: 10px 0 0;
+}
+.partner-aside-art .flow {
+  animation: partnerFlow 1.4s linear infinite;
+}
+@keyframes partnerFlow {
+  to { stroke-dashoffset: -15; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partner-aside-art .flow {
+    animation: none;
+  }
+}
+@media (max-width: 1000px) {
+  .partner-aside-art {
+    display: none;
+  }
+}
+/* kartice sa dugmetom na dnu (stranica Saradnja) */
+.feature-card.partner-card {
+  display: flex;
+  flex-direction: column;
+}
+.partner-card .partner-card-cta {
+  margin-top: auto;
+  padding-top: 20px;
 }
 .slideLeft-animation-izrada-sajtova,
         .width100-animation-izrada-sajtova,
@@ -4638,6 +4706,11 @@ p {
 @media (max-width: 768px), (prefers-reduced-motion: reduce) {
   .feature-card {
     animation: none !important;
+  }
+  .feature-card.goUp1-animation-izrada-sajta {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
   .section-about-img img,
