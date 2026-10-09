@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -702,7 +702,7 @@
 
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada Sajtova RS</span>. All rights reserved.</p>
-                <p class="footer-legal"><a href="../../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../../terms-of-use/">Terms of Use</a></p>
+                <p class="footer-legal"><a href="../../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../../terms-of-use/">Terms of Use</a><span aria-hidden="true">|</span><a href="../../partners/">Partnerships</a></p>
             </div>
         </div> 
     </footer>
@@ -1163,13 +1163,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -1192,6 +1207,9 @@ function loadFooterMap() {
     callback();
     return false;
   }
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
 </script>
 </body>
 </html>
