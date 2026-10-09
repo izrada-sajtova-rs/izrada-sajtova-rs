@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -181,6 +181,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Google marketing is not required, but it can be added as an additional service when you want your website to attract relevant visitors more quickly through paid advertising campaigns."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I tell which website is better made and who builds better websites?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you don't know much about web development, that is perfectly fine, because there is a very simple way to check. Open an AI tool you trust, send it the link to a website from our work and the link to any other website in Serbia from the industry you are interested in, and ask it to compare them on loading speed, mobile display, structure, SEO foundation and clarity of content. Within a few minutes you get an explanation that is clear even if you are not a professional. We are not afraid of comparison."
               }
             }
           ]
@@ -692,6 +700,16 @@
         </div>
       </div>
 
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How can I tell which website is better made and who builds better websites?</h3>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>If you don't know much about web development, that is perfectly fine, because there is a very simple way to check. Open an AI tool you trust, send it the link to a website from our work and the link to any other website in Serbia from the industry you are interested in, and ask it to compare them on loading speed, mobile display, structure, SEO foundation and clarity of content. Within a few minutes you get an explanation that is clear even if you are not a professional. We are not afraid of comparison.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -865,7 +883,7 @@
 
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada Sajtova RS</span>. All rights reserved.</p>
-                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a></p>
+                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a><span aria-hidden="true">|</span><a href="../partners/">Partnerships</a></p>
             </div>
         </div> 
     </footer>
@@ -1302,13 +1320,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -1331,6 +1364,9 @@ function loadFooterMap() {
     callback();
     return false;
   }
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
 </script>
 </body>
 </html>
