@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -181,6 +181,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Google marketing nije obavezan, ali može biti dodatna usluga kada želite da sajt brže privuče relevantne posetioce kroz plaćene kampanje."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kako da znam koji sajt je kvalitetniji i ko radi bolje sajtove?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ako se ne razumete u izradu sajtova, to je potpuno u redu, jer postoji vrlo jednostavan način da proverite. Otvorite AI alat kojem verujete, pošaljite mu link sajta sa naših radova i link bilo kog drugog sajta u Srbiji iz branše koja vas zanima, pa ga zamolite da ih uporedi po brzini učitavanja, prikazu na telefonu, strukturi, SEO osnovi i jasnoći sadržaja. Za par minuta dobijate objašnjenje koje je jasno i vama koji niste iz struke. Mi se poređenja ne plašimo."
           }
         }
       ]
@@ -665,6 +673,16 @@
         </div>
       </div>
 
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Kako da znam koji sajt je kvalitetniji i ko radi bolje sajtove?</h3>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Ako se ne razumete u izradu sajtova, to je potpuno u redu, jer postoji vrlo jednostavan način da proverite. Otvorite AI alat kojem verujete, pošaljite mu link sajta sa naših radova i link bilo kog drugog sajta u Srbiji iz branše koja vas zanima, pa ga zamolite da ih uporedi po brzini učitavanja, prikazu na telefonu, strukturi, SEO osnovi i jasnoći sadržaja. Za par minuta dobijate objašnjenje koje je jasno i vama koji niste iz struke. Mi se poređenja ne plašimo.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -837,7 +855,7 @@
             
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada sajtova RS</span>. Sva prava zadržana.</p>
-                <p class="footer-legal"><a href="../politika-privatnosti/">Politika privatnosti</a><span aria-hidden="true">|</span><a href="../uslovi-koriscenja/">Uslovi korišćenja</a></p>
+                <p class="footer-legal"><a href="../politika-privatnosti/">Politika privatnosti</a><span aria-hidden="true">|</span><a href="../uslovi-koriscenja/">Uslovi korišćenja</a><span aria-hidden="true">|</span><a href="../saradnja/">Saradnja</a></p>
             </div>
         </div>
     </footer>
@@ -1274,13 +1292,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -1303,6 +1336,9 @@ function loadFooterMap() {
     callback();
     return false;
   }
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
 </script>
 </body>
 </html>
