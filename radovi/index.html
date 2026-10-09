@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -1235,6 +1235,15 @@
       </div>
     </div>
   </section>
+  <section class="container section-about-page">
+  <div class="about-card">
+    <h3>Proverite kvalitet sajta sami, za nekoliko minuta</h3>
+    <div class="gold-underlineH3"></div>
+    <p>Većina ljudi ne zna kako da prepozna kvalitetan sajt, i to je sasvim normalno. Zato vam preporučujemo najlakši put: otvorite AI alat kojem verujete, pošaljite mu link nekog od radova sa ove stranice i link bilo kog drugog sajta u Srbiji iz branše koja vas zanima, pa ga zamolite da ih uporedi po brzini učitavanja, prikazu na telefonu, strukturi, SEO osnovi i jasnoći sadržaja.</p>
+    <p>Za nekoliko minuta dobijate objašnjenje koje je jasno i vama koji niste iz struke, i po kojem lako vidite gde je razlika. Mi se poređenja ne plašimo.</p>
+    <p><em>Primer pitanja: „Uporedi ova dva sajta po brzini učitavanja, prikazu na telefonu, strukturi, SEO osnovi i jasnoći sadržaja i objasni mi jednostavnim jezikom koji je kvalitetniji.“</em></p>
+  </div>
+</section>
   <section class="container service-mini-cta">
     <div class="process-cta goUp1-animation-izrada-sajta">
       <div class="cta-content">
@@ -1473,7 +1482,7 @@
             
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada sajtova RS</span>. Sva prava zadržana.</p>
-                <p class="footer-legal"><a href="../politika-privatnosti/">Politika privatnosti</a><span aria-hidden="true">|</span><a href="../uslovi-koriscenja/">Uslovi korišćenja</a></p>
+                <p class="footer-legal"><a href="../politika-privatnosti/">Politika privatnosti</a><span aria-hidden="true">|</span><a href="../uslovi-koriscenja/">Uslovi korišćenja</a><span aria-hidden="true">|</span><a href="../saradnja/">Saradnja</a></p>
             </div>
         </div>
     </footer>
@@ -1907,13 +1916,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -1974,6 +1998,9 @@ function loadFooterMap() {
       });
     });
   })();
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
 </script>
 </body>
 </html>
