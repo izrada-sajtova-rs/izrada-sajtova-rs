@@ -515,4 +515,37 @@
   <priority>0.30</priority>
 </url>
 
+<url>
+  <loc>https://izrada-sajtova-rs.com/saradnja/</loc>
+  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://izrada-sajtova-rs.com/saradnja/prodavci/</loc>
+  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://izrada-sajtova-rs.com/en/partners/</loc>
+  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://izrada-sajtova-rs.com/en/partners/sales-partners/</loc>
+  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+
 </urlset>
