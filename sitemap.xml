@@ -1,551 +1,570 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap – Izrada Sajtova RS (https://izrada-sajtova-rs.com)
+  Svaka stranica postoji na srpskom i engleskom jeziku; svaka adresa ima hreflang oznake (sr, en, x-default).
+  Redosled: svaka srpska stranica, pa odmah njena engleska verzija.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<url>
-  <loc>https://izrada-sajtova-rs.com/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/"/>
-  <lastmod>2026-10-01T08:48:12+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/radovi/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/radovi/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/our-work/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/radovi/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.95</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/our-work/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/radovi/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/our-work/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/radovi/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.95</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/izrada-sajtova-cene/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-design-pricing/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/web-design-pricing/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-design-pricing/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/izrada-sajtova/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-development/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/web-development/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-development/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/kontakt/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/kontakt/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/contact/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/kontakt/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/contact/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/kontakt/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/contact/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/kontakt/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/o-nama/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/o-nama/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/about-us/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/o-nama/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/about-us/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/o-nama/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/about-us/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/o-nama/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/izrada-online-prodavnica/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/e-commerce/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/e-commerce/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/e-commerce/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/redizajn-sajtova/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/website-redesign/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/website-redesign/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/website-redesign/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/izrada-animacija/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-animation/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/web-animation/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-animation/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/graficki-dizajn/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/graphic-design/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/graphic-design/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/graphic-design/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/google-marketing/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/google-marketing/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/google-marketing/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/google-ads/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/google-marketing/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/google-marketing/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/politika-privatnosti/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/privacy-policy/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.30</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/privacy-policy/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/privacy-policy/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.30</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/uslovi-koriscenja/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/terms-of-use/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
-  <lastmod>2026-10-01T08:48:11+00:00</lastmod>
-  <priority>0.30</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/terms-of-use/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/terms-of-use/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
-  <lastmod>2026-10-01T08:48:10+00:00</lastmod>
-  <priority>0.30</priority>
-</url>
+  <!-- ===== Početna / Home ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/</loc>
+    <lastmod>2026-10-01T08:48:12+00:00</lastmod>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/"/>
+  </url>
 
-<url>
-  <loc>https://izrada-sajtova-rs.com/saradnja/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
-  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/saradnja/prodavci/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
-  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/partners/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
-  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://izrada-sajtova-rs.com/en/partners/sales-partners/</loc>
-  <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
-  <lastmod>2026-10-09T09:00:00+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
+  <!-- ===== Usluge / Services ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/izrada-sajtova/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-development/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/web-development/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-development/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/izrada-online-prodavnica/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/e-commerce/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/e-commerce/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/e-commerce/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-online-prodavnica/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/redizajn-sajtova/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/website-redesign/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/website-redesign/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/website-redesign/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/redizajn-sajtova/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/izrada-animacija/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-animation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/web-animation/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-animation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-animacija/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/graficki-dizajn/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/graphic-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/graphic-design/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/graphic-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/graficki-dizajn/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/google-marketing/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/google-marketing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/google-marketing/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/google-ads/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/google-marketing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/google-marketing/"/>
+  </url>
+
+  <!-- ===== Cene / Pricing ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/izrada-sajtova-cene/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-design-pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/web-design-pricing/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/web-design-pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/izrada-sajtova-cene/"/>
+  </url>
+
+  <!-- ===== Radovi i studije slučaja / Our work & case studies ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/radovi/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/radovi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/our-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/radovi/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/our-work/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/radovi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/our-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/radovi/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/"/>
+  </url>
+
+  <!-- ===== Saveti / Blog ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/"/>
+  </url>
+
+  <!-- ===== Kompanija / Company ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/o-nama/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/o-nama/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/o-nama/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/about-us/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/o-nama/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/o-nama/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/kontakt/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/kontakt/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/contact/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/kontakt/"/>
+  </url>
+
+  <!-- ===== Saradnja / Partnerships ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saradnja/</loc>
+    <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/partners/</loc>
+    <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/saradnja/prodavci/</loc>
+    <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/partners/sales-partners/</loc>
+    <lastmod>2026-10-09T09:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/partners/sales-partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/saradnja/prodavci/"/>
+  </url>
+
+  <!-- ===== Pravne stranice / Legal ===== -->
+  <url>
+    <loc>https://izrada-sajtova-rs.com/politika-privatnosti/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/privacy-policy/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/politika-privatnosti/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/uslovi-koriscenja/</loc>
+    <lastmod>2026-10-01T08:48:11+00:00</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/terms-of-use/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
+  </url>
+  <url>
+    <loc>https://izrada-sajtova-rs.com/en/terms-of-use/</loc>
+    <lastmod>2026-10-01T08:48:10+00:00</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://izrada-sajtova-rs.com/en/terms-of-use/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://izrada-sajtova-rs.com/uslovi-koriscenja/"/>
+  </url>
 
 </urlset>
