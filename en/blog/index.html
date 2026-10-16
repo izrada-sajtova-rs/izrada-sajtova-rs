@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  © 2025–2026 Izrada Sajtova RS – https://izrada-sajtova-rs.com
+  © 2025 Izrada Sajtova RS – https://izrada-sajtova-rs.com
   Sva prava zadržana. / All rights reserved.
   Dizajn, kod, tekstovi i grafika ovog sajta zaštićeni su autorskim pravom.
   Kopiranje ili korišćenje bez pisane saglasnosti nije dozvoljeno.
@@ -428,7 +428,7 @@
 
             <div class="footer-bottom">
                 <p><span class="gold">&copy; 2025 Izrada Sajtova RS</span>. All rights reserved.</p>
-                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a></p>
+                <p class="footer-legal"><a href="../privacy-policy/">Privacy Policy</a><span aria-hidden="true">|</span><a href="../terms-of-use/">Terms of Use</a><span aria-hidden="true">|</span><a href="../partners/">Partnerships</a></p>
             </div>
         </div> 
     </footer>
@@ -875,13 +875,28 @@ function loadFooterMap() {
     gtag('config', 'AW-18141607037');
   }
 
-  window.addEventListener('scroll', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('mousemove', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('touchstart', loadGoogleTag, { once: true, passive: true });
-  window.addEventListener('click', loadGoogleTag, { once: true, passive: true });
+  // Google tag ne sme da blokira glavnu nit dok traju hero animacije: ucitava se tek posle ~4s od otvaranja strane,
+  // kada stranica miruje (cak i ako je korisnik odmah pomerio misa ili skrolovao).
+  let googleTagScheduled = false;
+  function scheduleGoogleTag() {
+    if (googleTagLoaded || googleTagScheduled) return;
+    googleTagScheduled = true;
+    const wait = Math.max(0, 4000 - performance.now());
+    setTimeout(function () {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+      } else {
+        loadGoogleTag();
+      }
+    }, wait);
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (evt) {
+    window.addEventListener(evt, scheduleGoogleTag, { once: true, passive: true });
+  });
 
   window.addEventListener('load', function () {
-    setTimeout(loadGoogleTag, 4000);
+    setTimeout(scheduleGoogleTag, 1000);
   });
 
   function gtag_report_conversion(url) {
@@ -904,6 +919,89 @@ function loadFooterMap() {
     callback();
     return false;
   }
+</script>
+<script>
+(function(){var b=document.querySelectorAll('.call-button,.music-toggle');function u(){var at=document.documentElement.scrollHeight-(window.innerHeight+window.scrollY)<100;b.forEach(function(e){e.classList.toggle('at-bottom',at)})}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();})();
+</script>
+<script>
+// H1 talas (slova se redom podebljavaju/žute): tekst naslova ostaje u HTML-u, aria-label čuva ceo naslov
+(function () {
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+var h1 = document.querySelector('h1');
+if (!h1 || h1.getAttribute('data-wave')) return;
+if (h1.children.length) return;
+var text = h1.textContent;
+if (!text || !text.trim()) return;
+var words = text.trim().split(/\s+/);
+var total = 0;
+words.forEach(function (w) { total += w.length; });
+if (!h1.getAttribute('aria-label')) h1.setAttribute('aria-label', text.trim());
+h1.setAttribute('data-wave', '1');
+h1.classList.add('h1-wave');
+h1.style.setProperty('--n', total);
+var frag = document.createDocumentFragment();
+var i = 0;
+words.forEach(function (word, wi) {
+var ws = document.createElement('span');
+ws.className = 'hw-w';
+ws.setAttribute('aria-hidden', 'true');
+for (var k = 0; k < word.length; k++) {
+var s = document.createElement('span');
+s.className = 'hw';
+s.style.setProperty('--i', i++);
+s.textContent = word.charAt(k);
+ws.appendChild(s);
+}
+frag.appendChild(ws);
+if (wi < words.length - 1) frag.appendChild(document.createTextNode(' '));
+});
+h1.textContent = '';
+h1.appendChild(frag);
+function unlockLines() {
+var lines = h1.querySelectorAll('.hw-line');
+for (var a = 0; a < lines.length; a++) {
+var ln = lines[a];
+while (ln.firstChild) h1.insertBefore(ln.firstChild, ln);
+h1.removeChild(ln);
+}
+}
+function lockLines() {
+unlockLines();
+var ws = h1.querySelectorAll('.hw-w');
+if (!ws.length) return;
+var groups = [], cur = [], top = null;
+for (var a = 0; a < ws.length; a++) {
+var t = ws[a].offsetTop;
+if (top === null || Math.abs(t - top) < 4) { cur.push(ws[a]); if (top === null) top = t; }
+else { groups.push(cur); cur = [ws[a]]; top = t; }
+}
+groups.push(cur);
+groups.forEach(function (g) {
+var line = document.createElement('span');
+line.className = 'hw-line';
+h1.insertBefore(line, g[0]);
+var node = g[0];
+var last = g[g.length - 1];
+while (node) {
+var next = node.nextSibling;
+line.appendChild(node);
+if (node === last) break;
+node = next;
+}
+});
+}
+function relock() { lockLines(); }
+var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+ready.then(function () { setTimeout(relock, 0); });
+var rt;
+window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(relock, 150); });
+if ('IntersectionObserver' in window) {
+h1.classList.add('hw-paused');
+new IntersectionObserver(function (entries) {
+entries.forEach(function (e) { h1.classList.toggle('hw-paused', !e.isIntersecting); });
+}, { threshold: 0.1 }).observe(h1);
+}
+})();
 </script>
 </body>
 </html>
