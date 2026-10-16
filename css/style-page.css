@@ -4795,3 +4795,25 @@ p {
   left: 0;
   color: gold;
 }
+
+/* ===== H1 talas: slova se redom podebljavaju i stanjuju (js/h1-wave.js) ===== */
+.h1-wave .hw-w { display: inline-block; white-space: nowrap; }
+.h1-wave .hw-line { display: block; white-space: nowrap; }
+.h1-wave .hw {
+  display: inline-block;
+  transform-origin: 0 60%;
+  margin-right: 0;
+  animation: h1Wave 9s ease-in-out infinite;     /* 6s talas + 3s pauza između ponavljanja */
+  animation-delay: calc(.6s + var(--i) * 2.4s / var(--n, 12));
+}
+.h1-wave.hw-paused .hw { animation-play-state: paused; }
+/* slovo se prvo malo skupi (manji razmak), pa se raširi (scaleX), požuti i napravi mesta oko sebe, pa se vrati */
+@keyframes h1Wave {
+  0%, 10.5%, 100% { transform: scaleX(1); margin-right: 0; }
+  2.6%            { transform: scaleX(.96); margin-right: -.1em; }
+  5.25%           { transform: scaleX(1.22); margin-right: .11em; color: var(--secondary-light, #fee24e); }
+  1.5%, 9%        { color: inherit; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .h1-wave .hw { animation: none; }
+}
