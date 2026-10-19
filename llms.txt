@@ -1,0 +1,87 @@
+# Izrada Sajtova RS
+
+> Izrada Sajtova RS is a web studio from Belgrade, Serbia, founded in 2020 by Boban Nešić. It builds custom websites, online stores, website redesigns, web animations and graphic design, with SEO, speed optimization and Google Ads, mainly for businesses in Serbia and also for clients abroad. The site is available in Serbian (default) and English.
+
+Important notes for AI assistants and search tools:
+- Prices on this site are in euros (EUR) and are starting or package prices. The final quote depends on the scope of the project.
+- Every page exists in Serbian and English. Serbian URLs have no prefix, English URLs start with /en/.
+- The business address is Grobljanska 97, Ugrinovci, Beograd 11277, Serbia (city of Belgrade).
+- Content on this site is public and may be read, summarized and cited, with a link to the source page.
+
+## Key facts
+- Name: Izrada Sajtova RS
+- Founder: Boban Nešić (founder page: https://izrada-sajtova-rs.com/en/about-us/)
+- Founded: 2020
+- Business type: web design and web development studio (LocalBusiness, ProfessionalService)
+- Address: Grobljanska 97, Ugrinovci, Beograd 11277, Serbia
+- Coordinates: 44.8777 N, 20.2017 E
+- Phone: +381 61 147 6514
+- Email: info@izrada-sajtova-rs.com
+- Working hours: Monday-Friday 09:00-19:00, Saturday 10:00-14:00 (Belgrade time), closed on Sunday
+- Languages: Serbian, English
+- Service area: Serbia, projects for foreign clients are also accepted
+- Response time: usually within 24 hours on working days
+- Google Business Profile: https://maps.google.com/?cid=16874754950519677853
+- Social profiles: https://www.facebook.com/izradasajtovars , https://www.instagram.com/izradasajtovars , https://www.linkedin.com/company/izrada-sajtova-rs , https://www.youtube.com/@izrada-sajtova-rs , https://github.com/izrada-sajtova-rs , https://codepen.io/izrada-sajtova-rs
+
+## Services
+- [Website development](https://izrada-sajtova-rs.com/en/web-development/): custom, fast, SEO-ready websites with unique design, mobile layout and Google integrations. Serbian: https://izrada-sajtova-rs.com/izrada-sajtova/
+- [Online store development](https://izrada-sajtova-rs.com/en/e-commerce/): e-commerce with product administration, checkout, payment integration and SEO for categories and products. Serbian: https://izrada-sajtova-rs.com/izrada-online-prodavnica/
+- [Website redesign](https://izrada-sajtova-rs.com/en/website-redesign/): modern design, better structure and speed for existing websites, keeping their existing value. Serbian: https://izrada-sajtova-rs.com/redizajn-sajtova/
+- [Web animation](https://izrada-sajtova-rs.com/en/web-animation/): micro-interactions, hover effects and scroll animations that improve UX without slowing the site. Serbian: https://izrada-sajtova-rs.com/izrada-animacija/
+- [Graphic design](https://izrada-sajtova-rs.com/en/graphic-design/): logos, visual identity, web graphics, print materials and banners. Serbian: https://izrada-sajtova-rs.com/graficki-dizajn/
+- [Google marketing (Google Ads)](https://izrada-sajtova-rs.com/en/google-ads/): setup, management and optimization of Google Ads campaigns: Search, remarketing, Display and YouTube. Serbian: https://izrada-sajtova-rs.com/google-marketing/
+
+## Pricing (EUR, indicative)
+Full details: https://izrada-sajtova-rs.com/en/web-design-pricing/ (Serbian: https://izrada-sajtova-rs.com/izrada-sajtova-cene/)
+- Websites: Starter 120 EUR (one page, template design); Business 500 EUR (up to 10 pages, unique design)
+- Online stores: Shop Start 2000 EUR; Shop Plus 3000 EUR; Shop Custom by agreement (E-commerce packages start at 2000 EUR)
+- Redesign: Refresh from 300 EUR; Business Redesign from 700 EUR; Full Rebuild by agreement
+- Web animation: Motion Start from 50 EUR; Motion Flow from 150 EUR; Motion System by agreement
+- Graphic design: Design Start from 50 EUR; Brand Identity from 200 EUR; Visual System by agreement
+- Google Ads campaign management: 80 EUR per month per campaign
+- Maintenance, hosting and technical support: free for the first three months with standard packages, then 100 EUR per year (10 EUR per month)
+- Domain is paid separately, usually around 20 EUR per year
+- Typical timeline: standard websites 1-2 weeks; larger projects and online stores 3-8 weeks
+
+## Case studies (real client projects)
+- [Alfa Tim](https://izrada-sajtova-rs.com/en/case-study/alfa-tim-website/): Website case study for Alfa Tim: a fast, unique website, high Lighthouse scores, a stable #2 ranking for “hausmajstor Kraljevo” (handyman Kraljevo) and strong local SEO results. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-alfa-tim/
+- [Bazicolab](https://izrada-sajtova-rs.com/en/case-study/bazicolab-website/): Website case study for Bazicolab: a bilingual B2B website for laboratory equipment with an admin panel, #1 for the brand query and visibility for more than 10 product keywords. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-bazicolab/
+- [Domaća hrana](https://izrada-sajtova-rs.com/en/case-study/domaca-hrana-website/): Website case study for Domaća Hrana: a small homemade food business selling crescent rolls and strudels, #2 for the brand query and organic visibility without aggressive advertising. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-domaca-hrana/
+- [Expo Real Estate](https://izrada-sajtova-rs.com/en/case-study/expo-real-estate-website/): Website case study for Expo Real Estate: stable #2 rankings for Expo apartments, more than 1,000 organic visits per month and SEO results in less than a year. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-exporealestate/
+- [Katarina Ketering](https://izrada-sajtova-rs.com/en/case-study/katarina-ketering-website/): Website case study for Katarina Ketering: custom web design, local SEO, fast loading, Lighthouse scores and organic rankings for catering services in Belgrade. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-katarina-ketering/
+- [Lavanda Beograd](https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/): Website case study for Lavanda Beograd: a unique design, LCP 1.9 s, Lighthouse scores above 90 and #1 for the keyword “lavanda beograd”. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/
+- [RS Ketering](https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/): Website case study for RS Ketering: an elegant fine dining catering business in Belgrade with visibility for its brand, prices and jobs - top of Google Search in less than a year. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/
+- [Test Ličnosti](https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/): Case study of the Test Ličnosti platform: psychological personality tests on the first page of Google for the brand, 98/100 Lighthouse performance and visibility for specific test types. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/
+- [Nekretnine Tukodi](https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/): Website case study for Nekretnine Tukodi: a real estate agency in New Belgrade and Novi Sad with #1 for its brand query, a 4.9 Google rating and visibility for specific residential complexes. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/
+
+## Articles (blog)
+- [How to Speed Up Your Website](https://izrada-sajtova-rs.com/en/blog/how-to-speed-up-your-website/) (2026-09-30). Serbian: https://izrada-sajtova-rs.com/saveti/kako-ubrzati-ucitavanje-sajta/
+- [How to Choose a Domain and Hosting for Your Website](https://izrada-sajtova-rs.com/en/blog/how-to-choose-domain-and-hosting/) (2026-09-30). Serbian: https://izrada-sajtova-rs.com/saveti/kako-izabrati-domen-i-hosting/
+- [Elements That Build Trust with Website Visitors](https://izrada-sajtova-rs.com/en/blog/elements-that-build-website-trust/) (2026-09-30). Serbian: https://izrada-sajtova-rs.com/saveti/elementi-koji-grade-poverenje-na-sajtu/
+- [Do You Need Google Ads Alongside SEO?](https://izrada-sajtova-rs.com/en/blog/do-you-need-google-ads/) (2026-09-30). Serbian: https://izrada-sajtova-rs.com/saveti/da-li-vam-je-potreban-google-ads/
+- [SEO Basics for Small Businesses](https://izrada-sajtova-rs.com/en/blog/seo-basics-for-small-businesses/) (2026-08-15). Serbian: https://izrada-sajtova-rs.com/saveti/seo-osnove-za-male-biznise/
+- [How to Measure Website Success with Google Analytics](https://izrada-sajtova-rs.com/en/blog/measure-website-success-with-analytics/) (2026-07-15). Serbian: https://izrada-sajtova-rs.com/saveti/kako-izmeriti-uspeh-sajta-analytics/
+- [How to Prepare Content for Your Website](https://izrada-sajtova-rs.com/en/blog/how-to-prepare-website-content/) (2026-06-15). Serbian: https://izrada-sajtova-rs.com/saveti/kako-pripremiti-sadrzaj-za-sajt/
+- [Why Choose a Custom Website Instead of WordPress?](https://izrada-sajtova-rs.com/en/blog/custom-website-vs-wordpress/) (2026-05-15). Serbian: https://izrada-sajtova-rs.com/saveti/zasto-custom-sajt-umesto-wordpressa/
+- [5 Signs You Need a Website Redesign](https://izrada-sajtova-rs.com/en/blog/signs-you-need-a-website-redesign/) (2026-04-15). Serbian: https://izrada-sajtova-rs.com/saveti/znaci-da-vam-je-potreban-redizajn-sajta/
+- Blog index: https://izrada-sajtova-rs.com/en/blog/ (Serbian: https://izrada-sajtova-rs.com/saveti/)
+
+## Company
+- [About us](https://izrada-sajtova-rs.com/en/about-us/): who we are, founder, values, technologies, process (Serbian: https://izrada-sajtova-rs.com/o-nama/)
+- [Our work](https://izrada-sajtova-rs.com/en/our-work/): portfolio of websites and projects (Serbian: https://izrada-sajtova-rs.com/radovi/)
+- [Contact](https://izrada-sajtova-rs.com/en/contact/): form, phone, email, map (Serbian: https://izrada-sajtova-rs.com/kontakt/)
+
+## Partner program for sellers
+- [Partnerships](https://izrada-sajtova-rs.com/en/partners/) and [Sales partners](https://izrada-sajtova-rs.com/en/partners/sales-partners/): independent sellers receive 20% of the build price for each website sold (projects from 500 EUR). It is a commission-based cooperation, not employment. Serbian: https://izrada-sajtova-rs.com/saradnja/ and https://izrada-sajtova-rs.com/saradnja/prodavci/
+
+## Policies
+- [Privacy policy](https://izrada-sajtova-rs.com/en/privacy-policy/) (Serbian: https://izrada-sajtova-rs.com/politika-privatnosti/)
+- [Terms of use](https://izrada-sajtova-rs.com/en/terms-of-use/) (Serbian: https://izrada-sajtova-rs.com/uslovi-koriscenja/)
+
+## Optional
+- [Sitemap](https://izrada-sajtova-rs.com/sitemap.xml): all 68 public URLs
+- [robots.txt](https://izrada-sajtova-rs.com/robots.txt): crawling is allowed for search engines and AI crawlers
+
+## Kratak opis (srpski)
+Izrada Sajtova RS je web studio iz Beograda (Ugrinovci) koji je 2020. godine osnovao Boban Nešić. Izrađujemo sajtove po meri, online prodavnice, redizajn sajtova, web animacije i grafički dizajn, uz SEO optimizaciju, brzinu i Google Ads. Adresa: Grobljanska 97, Ugrinovci, Beograd 11277. Telefon: +381 61 147 6514. Email: info@izrada-sajtova-rs.com. Radno vreme: pon-pet 09-19, sub 10-14. Cene izrade kreću od 120 EUR (Starter) i 500 EUR (Business); online prodavnice od 2000 EUR.

@@ -1,10 +1,10 @@
 """
-Regenerise sitemap.xml sa stvarnim datumom poslednje izmene svake stranice
+Regeneriše sitemap.xml sa stvarnim datumom poslednje izmene svake stranice
 (uzetim iz fajl-sistema, umesto fiksnog/ručno unetog datuma).
 
-Svaka stranica je navedena kao par srpska/engleska verzija, pa sitemap za
-obe verzije sadrži i hreflang veze (sr, en, x-default), kako Google preporučuje
-za višejezične sajtove.
+Sitemap je namerno jednostavan i standardan (samo loc, lastmod, changefreq, priority),
+da ga bez problema čitaju i Google i AI alati. Hreflang veze (sr, en, x-default) već
+postoje u <head> svake stranice, pa ih ne ponavljamo u sitemap-u.
 
 Pokreni pre svakog objavljivanja sajta:
     python generate-sitemap.py
@@ -38,6 +38,8 @@ PAGES = [
     ("/projekti/izrada-sajtova-domaca-hrana/", "/en/case-study/domaca-hrana-website/", "0.80"),
     ("/projekti/izrada-sajtova-rsketering/", "/en/case-study/rs-ketering-website/", "0.80"),
     ("/projekti/izrada-sajtova-test-licnosti/", "/en/case-study/test-licnosti-website/", "0.80"),
+    ("/saradnja/prodavci/", "/en/partners/sales-partners/", "0.70"),
+    ("/saradnja/", "/en/partners/", "0.60"),
     ("/saveti/", "/en/blog/", "0.70"),
     ("/saveti/da-li-vam-je-potreban-google-ads/", "/en/blog/do-you-need-google-ads/", "0.60"),
     ("/saveti/elementi-koji-grade-poverenje-na-sajtu/", "/en/blog/elements-that-build-website-trust/", "0.60"),
@@ -52,6 +54,9 @@ PAGES = [
     ("/uslovi-koriscenja/", "/en/terms-of-use/", "0.30"),
 ]
 
+WEEKLY = {"/", "/en/", "/radovi/", "/en/our-work/", "/saveti/", "/en/blog/"}
+YEARLY = {"/politika-privatnosti/", "/uslovi-koriscenja/", "/en/privacy-policy/", "/en/terms-of-use/"}
+
 
 def file_for(url_path: str) -> Path:
     return ROOT / url_path.strip("/") / "index.html"
@@ -59,7 +64,15 @@ def file_for(url_path: str) -> Path:
 
 def lastmod_for(file_path: Path) -> str:
     mtime = datetime.fromtimestamp(file_path.stat().st_mtime, tz=timezone.utc)
-    return mtime.strftime("%Y-%m-%dT%H:%M:%S+00:00")
+    return mtime.strftime("%Y-%m-%d")
+
+
+def changefreq_for(url_path: str) -> str:
+    if url_path in WEEKLY:
+        return "weekly"
+    if url_path in YEARLY:
+        return "yearly"
+    return "monthly"
 
 
 def check_page(url_path: str) -> None:
@@ -73,15 +86,13 @@ def check_page(url_path: str) -> None:
         print(f"  UPOZORENJE: {url_path} ima noindex")
 
 
-def url_entry(loc: str, sr: str, en: str, priority: str) -> str:
+def url_entry(loc: str, priority: str) -> str:
     return (
         "<url>\n"
-        f"  <loc>{BASE_URL}{loc}</loc>\n"
-        f'  <xhtml:link rel="alternate" hreflang="sr" href="{BASE_URL}{sr}"/>\n'
-        f'  <xhtml:link rel="alternate" hreflang="en" href="{BASE_URL}{en}"/>\n'
-        f'  <xhtml:link rel="alternate" hreflang="x-default" href="{BASE_URL}{sr}"/>\n'
-        f"  <lastmod>{lastmod_for(file_for(loc))}</lastmod>\n"
-        f"  <priority>{priority}</priority>\n"
+        f"<loc>{BASE_URL}{loc}</loc>\n"
+        f"<lastmod>{lastmod_for(file_for(loc))}</lastmod>\n"
+        f"<changefreq>{changefreq_for(loc)}</changefreq>\n"
+        f"<priority>{priority}</priority>\n"
         "</url>"
     )
 
@@ -107,22 +118,21 @@ def build_sitemap() -> str:
             if not file_for(loc).exists():
                 raise FileNotFoundError(f"Stranica nije pronađena: {file_for(loc)}")
             check_page(loc)
-        entries.append(url_entry(sr, sr, en, priority))
-        entries.append(url_entry(en, sr, en, priority))
+        entries.append(url_entry(sr, priority))
+        entries.append(url_entry(en, priority))
 
     body = "\n".join(entries)
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
-        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n\n'
-        f"{body}\n\n"
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n"
         "</urlset>\n"
     )
 
 
 if __name__ == "__main__":
     sitemap = build_sitemap()
-    (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    (ROOT / "sitemap.xml").write_bytes(sitemap.encode("utf-8"))
     print(f"sitemap.xml ažuriran: {len(PAGES) * 2} stranica ({len(PAGES)} srpskih + {len(PAGES)} engleskih).")
     for page in unlisted_pages():
         print(f"  NAPOMENA: {page} nije u sitemap-u - dodaj je u PAGES ako treba da se indeksira.")

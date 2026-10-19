@@ -1,3 +1,104 @@
+# robots.txt - Izrada Sajtova RS (https://izrada-sajtova-rs.com)
+#
+# Ceo sajt je javan i namenjen citanju. Pretrazivaci i AI asistenti su dobrodosli:
+# mogu da citaju, indeksiraju, citiraju i preporucuju nase stranice.
+# The whole site is public. Search engines and AI assistants are welcome to read,
+# index, quote and recommend our pages.
+#
+# Kratak opis firme za AI sisteme: https://izrada-sajtova-rs.com/llms.txt
+
+# --- Pretrazivaci / Search engines ---
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: YandexBot
+User-agent: Slurp
+Allow: /
+
+# --- OpenAI (ChatGPT): trening, ChatGPT pretraga, korisnicki zahtevi ---
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Claude-Web
+Allow: /
+
+# --- Google AI (Gemini, AI Overviews, Vertex) ---
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+# --- Microsoft (Bing / Copilot) ---
+User-agent: BingPreview
+Allow: /
+
+# --- Apple (Siri, Spotlight, Apple Intelligence) ---
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Meta (Meta AI) ---
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
+User-agent: facebookexternalhit
+Allow: /
+
+# --- Amazon (Alexa) ---
+User-agent: Amazonbot
+Allow: /
+
+# --- DuckDuckGo AI ---
+User-agent: DuckAssistBot
+Allow: /
+
+# --- Mistral AI ---
+User-agent: MistralAI-User
+Allow: /
+
+# --- Cohere ---
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# --- You.com ---
+User-agent: YouBot
+Allow: /
+
+# --- Common Crawl (podaci za treniranje mnogih modela) ---
+User-agent: CCBot
+Allow: /
+
+# --- ByteDance ---
+User-agent: Bytespider
+Allow: /
+
+# --- Ostali AI i istrazivacki botovi ---
+User-agent: Diffbot
+User-agent: ImagesiftBot
+User-agent: Omgili
+User-agent: Timpibot
+User-agent: PetalBot
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: Webzio-Extended
+Allow: /
+
+# --- Svi ostali / Everyone else ---
 User-agent: *
 Allow: /
+
 Sitemap: https://izrada-sajtova-rs.com/sitemap.xml
