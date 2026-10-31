@@ -3768,3 +3768,13 @@ p {
     margin: 0;
 }
 .hero-text1 p.eyebrow { width: fit-content; }
+
+/* h1 u hero delu pocetne: +30% (2rem > 2.6rem, 3rem > 3.9rem, 1.7rem > 2.21rem); traka reveal animacije prati visinu teksta */
+.hero-text1 h1 { font-size: 2.6rem; }
+.hero-text1 h1.revealText-animation-izrada-sajtova.active::after { height: 1.2em; }
+@media(min-width: 1200px){
+  .hero-text1 h1 { font-size: 3.9rem; }
+}
+@media(max-width: 1000px){
+  .hero-text1 h1 { font-size: 2.21rem; }
+}
