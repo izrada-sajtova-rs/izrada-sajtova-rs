@@ -38,6 +38,8 @@ PAGES = [
     ("/projekti/izrada-sajtova-domaca-hrana/", "/en/case-study/domaca-hrana-website/", "0.80"),
     ("/projekti/izrada-sajtova-rsketering/", "/en/case-study/rs-ketering-website/", "0.80"),
     ("/projekti/izrada-sajtova-test-licnosti/", "/en/case-study/test-licnosti-website/", "0.80"),
+    ("/projekti/izrada-sajtova-dobar-blog/", "/en/case-study/dobar-blog-website/", "0.80"),
+    ("/projekti/izrada-sajtova-prodaja-sajtova/", "/en/case-study/prodaja-sajtova-website/", "0.80"),
     ("/saradnja/prodavci/", "/en/partners/sales-partners/", "0.70"),
     ("/saradnja/", "/en/partners/", "0.60"),
     ("/saveti/", "/en/blog/", "0.70"),

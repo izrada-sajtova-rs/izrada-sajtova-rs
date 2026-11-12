@@ -34,8 +34,8 @@ Important notes for AI assistants and search tools:
 
 ## Pricing (EUR, indicative)
 Full details: https://izrada-sajtova-rs.com/en/web-design-pricing/ (Serbian: https://izrada-sajtova-rs.com/izrada-sajtova-cene/)
-- Websites: Starter 120 EUR (one page, template design); Business 500 EUR (up to 10 pages, unique design)
-- Online stores: Shop Start 2000 EUR; Shop Plus 3000 EUR; Shop Custom by agreement (E-commerce packages start at 2000 EUR)
+- Websites: Business from 500 EUR (up to 10 pages, unique design)
+- Online stores: Shop Start from 2000 EUR; Shop Plus from 3000 EUR; Shop Custom by agreement (E-commerce packages start at 2000 EUR)
 - Redesign: Refresh from 300 EUR; Business Redesign from 700 EUR; Full Rebuild by agreement
 - Web animation: Motion Start from 50 EUR; Motion Flow from 150 EUR; Motion System by agreement
 - Graphic design: Design Start from 50 EUR; Brand Identity from 200 EUR; Visual System by agreement
@@ -53,6 +53,8 @@ Full details: https://izrada-sajtova-rs.com/en/web-design-pricing/ (Serbian: htt
 - [Lavanda Beograd](https://izrada-sajtova-rs.com/en/case-study/lavanda-beograd-website/): Website case study for Lavanda Beograd: a unique design, LCP 1.9 s, Lighthouse scores above 90 and #1 for the keyword “lavanda beograd”. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-lavandabeograd/
 - [RS Ketering](https://izrada-sajtova-rs.com/en/case-study/rs-ketering-website/): Website case study for RS Ketering: an elegant fine dining catering business in Belgrade with visibility for its brand, prices and jobs - top of Google Search in less than a year. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-rsketering/
 - [Test Ličnosti](https://izrada-sajtova-rs.com/en/case-study/test-licnosti-website/): Case study of the Test Ličnosti platform: psychological personality tests on the first page of Google for the brand, 98/100 Lighthouse performance and visibility for specific test types. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-test-licnosti/
+- [Dobar Blog](https://izrada-sajtova-rs.com/en/case-study/dobar-blog-website/): Case study of the Dobar Blog platform: a blog with an advanced admin panel built in 10 days, #1 on Google for the keyword "dobar blog" and 95/100 Lighthouse performance. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-dobar-blog/
+- [Prodaja sajtova](https://izrada-sajtova-rs.com/en/case-study/prodaja-sajtova-website/): Case study of the Prodaja sajtova platform for buying and selling ready-made websites: built in 15 days, and in one month #1 on Google for "kupovina gotovih sajtova", #2 for "prodaja gotovih sajtova" and "prodaj sajt", #3 for "prodaja sajtova", and 92/100 Lighthouse performance. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-prodaja-sajtova/
 - [Nekretnine Tukodi](https://izrada-sajtova-rs.com/en/case-study/nekretnine-tukodi-website/): Website case study for Nekretnine Tukodi: a real estate agency in New Belgrade and Novi Sad with #1 for its brand query, a 4.9 Google rating and visibility for specific residential complexes. Serbian: https://izrada-sajtova-rs.com/projekti/izrada-sajtova-tukodi/
 
 ## Articles (blog)
@@ -84,4 +86,4 @@ Full details: https://izrada-sajtova-rs.com/en/web-design-pricing/ (Serbian: htt
 - [robots.txt](https://izrada-sajtova-rs.com/robots.txt): crawling is allowed for search engines and AI crawlers
 
 ## Kratak opis (srpski)
-Izrada Sajtova RS je web studio iz Beograda (Ugrinovci) koji je 2020. godine osnovao Boban Nešić. Izrađujemo sajtove po meri, online prodavnice, redizajn sajtova, web animacije i grafički dizajn, uz SEO optimizaciju, brzinu i Google Ads. Adresa: Grobljanska 97, Ugrinovci, Beograd 11277. Telefon: +381 61 147 6514. Email: info@izrada-sajtova-rs.com. Radno vreme: pon-pet 09-19, sub 10-14. Cene izrade kreću od 120 EUR (Starter) i 500 EUR (Business); online prodavnice od 2000 EUR.
+Izrada Sajtova RS je web studio iz Beograda (Ugrinovci) koji je 2020. godine osnovao Boban Nešić. Izrađujemo sajtove po meri, online prodavnice, redizajn sajtova, web animacije i grafički dizajn, uz SEO optimizaciju, brzinu i Google Ads. Adresa: Grobljanska 97, Ugrinovci, Beograd 11277. Telefon: +381 61 147 6514. Email: info@izrada-sajtova-rs.com. Radno vreme: pon-pet 09-19, sub 10-14. Cene izrade sajtova kreću od 500 EUR (Business paket); online prodavnice od 2000 EUR.

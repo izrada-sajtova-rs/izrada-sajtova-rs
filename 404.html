@@ -116,5 +116,30 @@ function gtag_report_conversion(url) {
     return false;
   }
 </script>
+<script>
+// kursor: bela tacka (samo mis sa preciznim pokazivacem); na linkovima i dugmadi se uveca i postaje poluprovidna
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+  var root = document.documentElement, x = 0, y = 0, raf = 0;
+  var LINK = 'a,button,summary,label,select,[role="button"],.button,.open-nav-menu,.close-nav-menu,.faq-question,.filter-btn,.music-toggle,input[type="submit"],input[type="button"],input[type="checkbox"],input[type="radio"]';
+  var TEXT = 'input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),textarea,iframe';
+  function paint() { raf = 0; dot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)'; }
+  document.addEventListener('mousemove', function (e) {
+    x = e.clientX; y = e.clientY;
+    if (!raf) raf = requestAnimationFrame(paint);
+    root.classList.add('has-dot-cursor');
+    var t = e.target;
+    dot.classList.toggle('on', !(t.closest && t.closest(TEXT)));
+    dot.classList.toggle('link', !!(t.closest && t.closest(LINK)));
+  }, { passive: true });
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget || e.relatedTarget.tagName === 'IFRAME') dot.classList.remove('on');
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>

@@ -4844,3 +4844,34 @@ p {
 /* linkovi u listi cinjenica (O nama) */
 .about-card .price-features a { color: var(--secondary-light); text-decoration: none; }
 .about-card .price-features a:hover { text-decoration: underline; }
+
+/* naslovi: H2 i H3 sekcija rastu glatko (clamp), tablet vise ne dobija telefonske velicine; H1, kartice paketa, FAQ, stat/about kartice i podnozje se ne diraju */
+h2 { font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2.125rem); }
+h3 { font-size: clamp(1.125rem, 1rem + .45vw, 1.4rem); line-height: 1.3; }
+.related-article-card h3 { letter-spacing: 1px; }
+@media(max-width: 800px){ h4 { font-size: .75rem; } }
+
+/* naslovi kartica u sekciji "Sta je uključeno u pakete" (service-proof): manji nego ranije; brojevi u rezultatima portfolija ostaju veliki */
+.service-proof-stats .stat-card h3 { font-size: 1.5rem; }
+@media(max-width: 600px){ .service-proof-stats .stat-card h3 { font-size: 1.25rem; } }
+
+/* H1 podstranica (.pageh1): 2.5rem > 2.7rem na velikom ekranu, a manji ekrani glatko prate (tablet i telefon vise ne ostaju na 1.7rem); H1 na pocetnoj se ne dira */
+.pageh1 { font-size: clamp(1.85rem, 1.44rem + 1.68vw, 2.7rem); }
+
+/* H1 studija slucaja (.kk-hero-text): ista glatka skala kao .pageh1, samo sa visim maksimumom (3rem) jer je hero sa slikom */
+.kk-hero-text h1 { font-size: clamp(1.85rem, 1.44rem + 1.68vw, 3rem); }
+
+/* kursor: bela tacka umesto misa (samo uredjaji sa misem; JS dodaje klasu has-dot-cursor); na linkovima i dugmadi se uveca i postaje poluprovidna */
+.cursor-dot { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  html.has-dot-cursor, html.has-dot-cursor * { cursor: none !important; }
+  html.has-dot-cursor input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+  html.has-dot-cursor textarea { cursor: text !important; }
+  .cursor-dot { display: block; position: fixed; left: 0; top: 0; width: 0; height: 0; pointer-events: none; z-index: 2147483647; opacity: 0; transition: opacity .2s; will-change: transform; }
+  .cursor-dot.on { opacity: 1; }
+  .cursor-dot::before { content: ""; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; box-sizing: border-box; border: 1.5px solid transparent; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px rgba(0, 0, 0, .35); transition: width .2s ease, height .2s ease, left .2s ease, top .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+  .cursor-dot.link::before { left: -18px; top: -18px; width: 36px; height: 36px; background: rgba(255, 255, 255, .4); border-color: #fff; box-shadow: 0 0 0 1px rgba(0, 0, 0, .2); }
+  .cursor-dot::after { content: ""; position: absolute; left: -2px; top: -2px; width: 4px; height: 4px; border-radius: 50%; background: #fff; opacity: 0; transition: opacity .2s ease; }
+  .cursor-dot.link::after { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .cursor-dot::before, .cursor-dot::after { transition: none; } }
