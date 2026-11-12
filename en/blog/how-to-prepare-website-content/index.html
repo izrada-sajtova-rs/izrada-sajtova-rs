@@ -696,20 +696,235 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+// Karte: prvo se podize prazna kutija (jedna za drugom), pa se sadrzaj unutar nje pojavljuje element po element (talas).
+// Talas ide preko Web Animations API (opacity + translate), pa ne smeta postojecim CSS animacijama, prelazima i hover efektima.
+// Velike slike (O nama, saveti) se ne pomeraju nego se otkrivaju brisanjem (clip-path).
+const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CARD_SELECTOR = '.goUp1-animation-izrada-sajta';
+const FAQ_SELECTOR = '.faq-item';
+const REVEAL_IMG_SELECTOR = '.savet-card > img';
+const WAVE = {
+    cardStagger: 0.18,     // s izmedju karata koje ulaze zajedno
+    faqStagger: 0.1,       // s izmedju FAQ stavki
+    itemStart: 0.3,        // s posle starta kutije kada pocinje sadrzaj
+    itemDuration: 300,     // ms po elementu
+    itemStep: 45,          // ms izmedju elemenata u talasu
+    imgDuration: 900,      // ms otkrivanja slike
+    titleDuration: 750,    // ms otkrivanja naslova sekcije (h2)
+    lineDuration: 500,     // ms otkrivanja zlatne linije ispod naslova
+    imgFrom: 'inset(0 100% 0 0)' // slika se otkriva sa leva na desno; za desno-levo: 'inset(0 0 0 100%)'
+};
+const EASE = 'cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+const EASE_REVEAL = 'cubic-bezier(0.65, 0, 0.35, 1)';
+
+function positionOrder(a, b) {
+    const A = a.getBoundingClientRect(), B = b.getBoundingClientRect();
+    return (Math.round(A.top / 40) - Math.round(B.top / 40)) || (A.left - B.left);
+}
+
+function waveItems(card) {
+    const items = [];
+    (function walk(el, depth) {
+        Array.from(el.children).forEach(child => {
+            if (child.matches('svg.decoration-svg1, .step-number-bg, .arrow-down, .faq-answer, script, style')) return;
+            const cs = getComputedStyle(child);
+            if (cs.display === 'none' || (cs.visibility === 'hidden' && getComputedStyle(el).visibility !== 'hidden') || parseFloat(cs.opacity) < 0.05) return; // npr. hover slojevi (visibility se nasledjuje od karte koja je jos skrivena, to se ne racuna)
+            const isWrapper = depth < 3 && /^(DIV|UL|OL)$/.test(child.tagName) && child.children.length > 1 &&
+                !child.matches('.gold-underlineH2, .gold-underlineH3');
+            if (isWrapper) walk(child, depth + 1);
+            else items.push(child);
+        });
+    })(card, 0);
+    return items;
+}
+
+function isBigMedia(el) {
+    return /^(IMG|VIDEO|PICTURE|FIGURE|IFRAME)$/.test(el.tagName) && el.getBoundingClientRect().width >= 240;
+}
+
+function waveContent(card, boxDelay) {
+    if (reduceMotion || !card.animate) return;
+    waveItems(card).forEach((el, i) => {
+        const delay = (boxDelay + WAVE.itemStart) * 1000 + i * WAVE.itemStep;
+        if (el.matches(REVEAL_IMG_SELECTOR) || isBigMedia(el)) {
+            el.animate([{ clipPath: WAVE.imgFrom }, { clipPath: 'inset(0 0 0 0)' }],
+                { duration: WAVE.imgDuration, delay: delay, easing: EASE_REVEAL, fill: 'backwards' });
+        } else {
+            el.animate([{ opacity: 0, translate: '0 18px' }, { translate: '0 0' }],
+                { duration: WAVE.itemDuration, delay: delay, easing: EASE, fill: 'backwards' });
         }
     });
+}
+
+function raiseCard(card, order) {
+    const boxDelay = Math.min(order, 5) * WAVE.cardStagger;
+    card.style.animationDelay = boxDelay + 's';
+    waveContent(card, boxDelay);
+}
+
+function raiseFaq(item, order) {
+    const boxDelay = Math.min(order, 7) * WAVE.faqStagger;
+    item.style.opacity = '';
+    if (reduceMotion || !item.animate) return;
+    item.animate([{ opacity: 0, translate: '0 40px' }, { translate: '0 0' }],
+        { duration: 500, delay: boxDelay * 1000, easing: EASE, fill: 'backwards' });
+    waveContent(item, boxDelay);
+}
+
+function revealImage(box) {
+    // okvir (kutija) se podigne prazan, pa se slika otkrije brisanjem sa leva na desno.
+    // Slika je lazy, pa se sve pokrece tek kad je ucitana (okvir bez slike je samo mali kvadrat).
+    // Slika se ne sakriva unapred isecanjem, jer bi je lazy-loading tada smatrao nevidljivom i nikad je ne bi ucitao;
+    // do tada je sakriva CSS (opacity: 0 na okviru).
+    const img = box.querySelector('img');
+    const start = () => {
+        box.style.opacity = '1'; // CSS ima opacity: 0 (stara shrink animacija se vise ne koristi)
+        if (reduceMotion || !box.animate) return;
+        box.animate([{ opacity: 0, translate: '0 40px' }, { translate: '0 0' }],
+            { duration: 500, easing: EASE, fill: 'backwards' });
+        if (img && img.animate) {
+            img.animate([{ clipPath: WAVE.imgFrom }, { clipPath: 'inset(0 0 0 0)' }],
+                { duration: 1100, delay: 300, easing: EASE_REVEAL, fill: 'backwards' });
+        }
+    };
+    if (!img || img.complete) start(); else img.addEventListener('load', start, { once: true });
+}
+
+// Naslov sekcije (h2) i linija ispod njega otkrivaju se brisanjem sa leva na desno.
+// Isecaju se h2 i linija, a posmatra se kontejner .titleH2 (potpuno isecen element IntersectionObserver ne prijavljuje).
+function revealTitle(title) {
+    const h2 = title.querySelector('h2');
+    const line = title.querySelector('.gold-underlineH2');
+    const more = title.querySelector('.blog-see-all');
+    [h2, line].forEach(el => { if (el) el.style.clipPath = ''; });
+    if (reduceMotion || !title.animate) return;
+    if (h2) {
+        // brisanje prati stvarnu sirinu teksta (ne celu sirinu kontejnera)
+        const box = h2.getBoundingClientRect();
+        const range = document.createRange();
+        range.selectNodeContents(h2);
+        const text = range.getBoundingClientRect();
+        const from = Math.max(0, box.width - (text.left - box.left));
+        const to = Math.max(0, box.width - (text.right - box.left) - 6);
+        h2.animate([{ clipPath: 'inset(0 ' + from + 'px 0 0)' }, { clipPath: 'inset(0 ' + to + 'px 0 0)' }],
+            { duration: WAVE.titleDuration, easing: EASE_REVEAL, fill: 'backwards' });
+    }
+    if (line) {
+        line.animate([{ clipPath: WAVE.imgFrom }, { clipPath: 'inset(0 0 0 0)' }],
+            { duration: WAVE.lineDuration, easing: EASE_REVEAL, fill: 'backwards' });
+    }
+    if (more) {
+        more.animate([{ opacity: 0, translate: '0 10px' }, { translate: '0 0' }],
+            { duration: 400, delay: 400, easing: EASE, fill: 'backwards' });
+    }
+}
+
+// sakrij FAQ stavke i naslove sekcija dok ne udju u vidno polje (samo uz JS, bez JS-a ostaju vidljivi)
+if (!reduceMotion) {
+    document.querySelectorAll(FAQ_SELECTOR).forEach(el => { el.style.opacity = '0'; });
+    document.querySelectorAll('.titleH2 h2, .titleH2 .gold-underlineH2').forEach(el => { el.style.clipPath = WAVE.imgFrom; });
+}
+
+const observer = new IntersectionObserver((entries) => {
+    const cards = [], faqs = [];
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        observer.unobserve(el);
+        if (el.matches(CARD_SELECTOR)) cards.push(el);
+        else if (el.matches(FAQ_SELECTOR)) faqs.push(el);
+        else if (el.matches('.section-about-img')) revealImage(el);
+        else if (el.matches('.titleH2')) revealTitle(el);
+        else el.classList.add('active');
+    });
+    const byPosition = positionOrder;
+    cards.sort(byPosition).forEach((el, i) => {
+        raiseCard(el, i);
+        el.classList.add('active');
+    });
+    faqs.sort(byPosition).forEach((el, i) => raiseFaq(el, i));
 }, observerOptions);
 
 document.querySelectorAll(`
     .shrinkImg-animation-izrada-sajtova,
     .goUp1-animation-izrada-sajta,
     .goUp-animation-izrada-sajtova,
-    .text-line-animation
+    .text-line-animation,
+    .faq-item,
+    .titleH2
 `).forEach(el => observer.observe(el));
+
+// ---- Svi ostali delovi sadrzaja (tekstovi, kutije, karte, slike) pronalaze se sami i dobijaju iste animacije ----
+// Hero, podnozje i dekoracije su van ovoga. Kutija (ima pozadinu/okvir/senku) se podize prazna pa se sadrzaj talasa;
+// ostalo (paragraf, naslov, stavka liste, slika) se pojavljuje pojedinacno. Ono sto je vec animirano ostaje kako je.
+const ANIMATED = '.goUp1-animation-izrada-sajta, .goUp-animation-izrada-sajtova, .shrinkImg-animation-izrada-sajtova, .opacity-animation-izrada-sajtova, .faq-item, .faq-section, .titleH2, .savet-card, .section-about-img';
+const AUTO_SKIP = '.hero, .hero-about, .decoration, .kk-hero, .website-preview, footer, header, script, style, noscript, iframe, canvas, svg, form, [aria-hidden="true"], [hidden]';
+const LEAF_TAGS = /^(P|H[1-6]|LI|A|SPAN|IMG|VIDEO|PICTURE|FIGURE|BLOCKQUOTE|PRE|BUTTON|TABLE|LABEL|STRONG|EM|B|I|SMALL|DL|DT|DD)$/;
+
+function hasVisual(el) {
+    const cs = getComputedStyle(el);
+    const bg = cs.backgroundColor;
+    const hasBg = bg && bg !== 'transparent' && !/rgba\(\s*0,\s*0,\s*0,\s*0\s*\)/.test(bg);
+    const hasBorder = ['Top', 'Right', 'Bottom', 'Left'].some(side => parseFloat(cs['border' + side + 'Width']) > 0 && cs['border' + side + 'Style'] !== 'none');
+    return hasBg || hasBorder || (cs.boxShadow && cs.boxShadow !== 'none') || (cs.backgroundImage && cs.backgroundImage !== 'none');
+}
+
+function collectUnits(root, out, depth) {
+    Array.from(root.children).forEach(c => {
+        if (c.matches(AUTO_SKIP) || c.matches(ANIMATED)) return;
+        if (!c.textContent.trim() && !c.querySelector('img, video, picture')) return;
+        if (c.querySelector(ANIMATED)) { if (depth < 5) collectUnits(c, out, depth + 1); return; }
+        if (hasVisual(c) && (!LEAF_TAGS.test(c.tagName) || c.children.length >= 2)) { out.push({ el: c, type: 'box' }); return; }
+        const kids = Array.from(c.children).filter(k => !k.matches(AUTO_SKIP));
+        if (LEAF_TAGS.test(c.tagName) || kids.length === 0 || depth >= 5) { out.push({ el: c, type: 'leaf' }); return; }
+        collectUnits(c, out, depth + 1);
+    });
+}
+
+function riseUnit(unit, order) {
+    const el = unit.el;
+    const delay = Math.min(order, 6) * 0.12;
+    el.style.opacity = '';
+    if (reduceMotion || !el.animate) return;
+    if (unit.type === 'box') {
+        el.animate([{ opacity: 0, translate: '0 40px' }, { translate: '0 0' }],
+            { duration: 500, delay: delay * 1000, easing: EASE, fill: 'backwards' });
+        waveContent(el, delay);
+    } else if (isBigMedia(el)) {
+        el.animate([{ clipPath: WAVE.imgFrom }, { clipPath: 'inset(0 0 0 0)' }],
+            { duration: WAVE.imgDuration, delay: delay * 1000, easing: EASE_REVEAL, fill: 'backwards' });
+    } else {
+        el.animate([{ opacity: 0, translate: '0 18px' }, { translate: '0 0' }],
+            { duration: 400, delay: delay * 1000, easing: EASE, fill: 'backwards' });
+    }
+}
+
+(function initAutoUnits() {
+    if (reduceMotion || !('IntersectionObserver' in window) || !document.body.animate) return;
+    const main = document.querySelector('main');
+    if (!main) return;
+    const units = [];
+    const byEl = new Map();
+    try {
+        collectUnits(main, units, 0);
+        const live = units.filter(u => u.el.getClientRects().length > 0); // samo ono sto je sada prikazano
+        const unitObserver = new IntersectionObserver((entries) => {
+            const batch = [];
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                unitObserver.unobserve(entry.target);
+                const u = byEl.get(entry.target);
+                if (u) batch.push(u);
+            });
+            batch.sort((a, b) => positionOrder(a.el, b.el)).forEach((u, i) => riseUnit(u, i));
+        }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+        live.forEach(u => { byEl.set(u.el, u); u.el.style.opacity = '0'; unitObserver.observe(u.el); });
+        // stampa: sve mora biti vidljivo
+        window.addEventListener('beforeprint', () => live.forEach(u => { u.el.style.opacity = ''; }));
+    } catch (e) {
+        units.forEach(u => { u.el.style.opacity = ''; });
+    }
+})();
 
 window.addEventListener('load', () => {
     document.querySelectorAll(`
@@ -1136,6 +1351,31 @@ new IntersectionObserver(function (entries) {
 entries.forEach(function (e) { h1.classList.toggle('hw-paused', !e.isIntersecting); });
 }, { threshold: 0.1 }).observe(h1);
 }
+})();
+</script>
+<script>
+// kursor: bela tacka (samo mis sa preciznim pokazivacem); na linkovima i dugmadi se uveca i postaje poluprovidna
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+  var root = document.documentElement, x = 0, y = 0, raf = 0;
+  var LINK = 'a,button,summary,label,select,[role="button"],.button,.open-nav-menu,.close-nav-menu,.faq-question,.filter-btn,.music-toggle,input[type="submit"],input[type="button"],input[type="checkbox"],input[type="radio"]';
+  var TEXT = 'input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),textarea,iframe';
+  function paint() { raf = 0; dot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)'; }
+  document.addEventListener('mousemove', function (e) {
+    x = e.clientX; y = e.clientY;
+    if (!raf) raf = requestAnimationFrame(paint);
+    root.classList.add('has-dot-cursor');
+    var t = e.target;
+    dot.classList.toggle('on', !(t.closest && t.closest(TEXT)));
+    dot.classList.toggle('link', !!(t.closest && t.closest(LINK)));
+  }, { passive: true });
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget || e.relatedTarget.tagName === 'IFRAME') dot.classList.remove('on');
+  }, { passive: true });
 })();
 </script>
 </body>
